@@ -1,0 +1,9 @@
+[requires]
+lyradb_formats/1.0.0
+
+[generators]
+CMakeDeps
+CMakeToolchain
+
+[layout]
+cmake_layout
