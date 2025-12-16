@@ -1,0 +1,17 @@
+.vscode/
+build/
+dist/
+*.pyc
+__pycache__/
+*.so
+*.dll
+*.dylib
+.DS_Store
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.vcxproj
+*.sln
+.idea/
+*.iml

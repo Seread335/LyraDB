@@ -1,0 +1,27 @@
+CompileFlags:
+  Add:
+    - -I./include
+    - -I./include/lyradb
+    - -I./src
+    - -std=c++17
+    - -D_DEBUG
+    - -DUNICODE
+    - -D_UNICODE
+  Remove:
+    - -fms-extensions
+
+InlayHints:
+  Enabled: true
+  ParameterNames: true
+  DeducedTypes: true
+
+Hover:
+  ShowAKA: true
+
+Index:
+  Background: Build
+
+Diagnostics:
+  Suppress:
+    - clang-diagnostic-unknown-warning-option
+    - clang-diagnostic-deprecated-declarations
