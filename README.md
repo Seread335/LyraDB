@@ -7,25 +7,43 @@
 
 A high-performance, feature-rich relational database engine written in modern C++17 with production-grade stability and optimization.
 
-## 🚀 Quick Start
+## 🚀 Quick Start (Choose Your Path)
 
-### With Conan (Recommended)
+### ⭐ Option 1: Conan Package (Easiest - Recommended)
 
 ```bash
-# Just 3 commands!
+# Just 2 commands!
 conan install lyradb_formats/1.0.0
-# Add to your CMakeLists.txt and use it
+# Then use in your project - no compilation needed!
 ```
 
-### From Source
+**Perfect for:** Quick integration, cross-platform projects, CI/CD pipelines
+
+### Option 2: From Source (Full Control)
 
 ```bash
 git clone https://github.com/Seread335/LyraDB.git
 cd LyraDB
-mkdir build && cd build
-cmake ..
-cmake --build . --config Release
+
+# Windows
+build_windows.bat
+
+# Linux
+./build_linux.sh
+
+# macOS
+./build_macos.sh
 ```
+
+**Perfect for:** Building custom, debugging, contributing to LyraDB
+
+### Option 3: Pre-built Binaries
+
+Download from `dist/` folder - Windows Release/Debug builds ready to use.
+
+**Perfect for:** Quick testing without compilation
+
+👉 **[Detailed Installation Guide →](INSTALLATION.md)**
 
 ## ✨ Features
 
@@ -52,14 +70,33 @@ cmake --build . --config Release
 
 ## 📚 Documentation
 
+### Installation & Setup
 | Document | Purpose |
 |----------|---------|
-| [Getting Started](docs/01_GETTING_STARTED.md) | First steps and setup |
-| [SQL Reference](docs/02_SQL_REFERENCE.md) | SQL syntax and examples |
-| [C API Reference](docs/03_C_API_REFERENCE.md) | C API documentation |
+| **[Installation Guide](INSTALLATION.md)** | 📖 **START HERE** - All 3 installation options |
+| **[Conan Guide](CONAN_INSTALLATION_GUIDE.md)** | Package installation via Conan |
+| [Getting Started](docs/01_GETTING_STARTED.md) | First steps and basic examples |
+
+### API References
+| Document | Purpose |
+|----------|---------|
 | [C++ API Reference](docs/04_CPP_API_REFERENCE.md) | C++ API documentation |
-| [Installation Guide](docs/07_INSTALLATION.md) | Build and install steps |
-| [Conan Guide](CONAN_INSTALLATION_GUIDE.md) | Package installation via Conan |
+| [C API Reference](docs/03_C_API_REFERENCE.md) | C API documentation |
+| [SQL Reference](docs/02_SQL_REFERENCE.md) | SQL syntax and examples |
+
+### Advanced Topics
+| Document | Purpose |
+|----------|---------|
+| [Data Types Reference](docs/05_DATA_TYPES_REFERENCE.md) | Supported data types |
+| [Integration Guide](docs/08_INTEGRATION_GUIDE.md) | System integration |
+| [Troubleshooting](docs/06_TROUBLESHOOTING.md) | Common issues & solutions |
+
+### Project Info
+| Document | Purpose |
+|----------|---------|
+| [Test Reports](DATABASE_COMPREHENSIVE_TEST_REPORT.md) | 95%+ test pass rate results |
+| [Issues Fixed](ISSUES_FIXED.md) | Completed bug fixes & improvements |
+| [Usage & Distribution](USAGE_AND_DISTRIBUTION.md) | Project distribution details |
 
 ## 📦 Library Usage
 
@@ -191,18 +228,30 @@ LyraDB/
 ├── include/           # Public headers
 │   ├── lyradb.h      # Main C++ API
 │   ├── lyradb_c.h    # C API
-│   └── lyradb/       # Library headers
+│   └── lyradb/       # Library headers (lyradb_formats.h, etc.)
 ├── src/              # Implementation
 │   ├── core/        # Database core
 │   ├── query/       # Query processing
 │   ├── storage/     # Storage & compression
 │   ├── indexes/     # Index implementations
-│   └── buffer/      # Buffer management
+│   ├── buffer/      # Buffer management
+│   ├── execution/   # Execution engine
+│   ├── server/      # REST API server
+│   └── bindings/    # C API bindings
 ├── examples/        # Working examples
-├── tests/          # Test suite
-├── benchmarks/     # Performance benchmarks
-├── docs/           # Documentation
-└── test_web_app/   # Web app demonstration
+│   ├── conan_usage_example/    # Conan package example
+│   ├── test_formats.cpp         # File format examples
+│   └── usage_demo.cpp           # Production demo
+├── tests/           # Test suite
+├── benchmarks/      # Performance benchmarks
+├── docs/            # Documentation (9 guides)
+├── test_web_app/    # E-commerce web app demo
+├── dist/            # Pre-built distributions
+│   ├── windows/     # Windows builds (Release/Debug)
+│   ├── documentation/  # Distribution docs
+│   ├── libraries/    # Library distributions
+│   └── examples/     # Distribution examples
+└── build/           # Build output (generated)
 ```
 
 ## 🎯 Key Achievements
