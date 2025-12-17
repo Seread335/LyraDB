@@ -1,0 +1,21 @@
+LyraDB Binary Distribution
+Version: 1.0.0
+Release Date: December 2024
+
+Compiler Information:
+- Windows: MSVC 19.44 (Visual Studio 2022)
+- Linux: GCC 11.2 (or compatible)
+- macOS: Clang 14.0 (or compatible)
+
+Build Configuration:
+- C++ Standard: C++17
+- Optimization Level: -O2 / /O2
+- Runtime: Dynamic (MSVC Runtime for Windows)
+- Static Linking: zlib, compression libraries
+
+Supported Architectures:
+- Windows: x64 (AMD64)
+- Linux: x64 (AMD64)
+- macOS: x64 (Intel), ARM64 (Apple Silicon)
+
+Build Date: December 17, 2024

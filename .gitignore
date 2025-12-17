@@ -1,8 +1,6 @@
 .vscode/
 build/
-dist/
-*.pyc
-__pycache__/
+
 *.so
 *.dll
 *.dylib
